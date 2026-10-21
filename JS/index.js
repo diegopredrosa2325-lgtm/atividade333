@@ -53,6 +53,11 @@ function criarCardProduto(produto) {
         currency: "USD",
     });
 
+    const botaoDetalhes = document.createElement("a");
+    botaoDetalhes.classList.add("botao-detalhes");
+    botaoDetalhes.href = `../HTML/detalhes.html?id=${produto.id}`;
+    botaoDetalhes.textContent = "Ver detalhes";
+
     const botao = document.createElement("button");
     botao.classList.add("botao-carrinho");
     botao.textContent = "Adicionar ao carrinho";
@@ -61,7 +66,13 @@ function criarCardProduto(produto) {
         adicionarAoCarrinho(produto);
     });
 
-    card.append(imagem, titulo, preco, botao);
+    card.append(
+        imagem,
+        titulo,
+        preco,
+        botaoDetalhes,
+        botao
+    );
 
     return card;
 }

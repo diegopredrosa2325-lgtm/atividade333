@@ -112,3 +112,25 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+.botao-detalhes {
+    display: block;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 2px solid #1976d2;
+    border-radius: 6px;
+    color: #1976d2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.botao-detalhes:hover {
+    background-color: #eaf3fc;
+}
+
+.botao-detalhes:focus-visible {
+    outline: 3px solid #ff9800;
+    outline-offset: 2px;
+}
